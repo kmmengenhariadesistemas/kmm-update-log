@@ -1,0 +1,41 @@
+<table cellspacing="0" cellpadding="0"  style="padding: 0px 0px 0px 0px; border-spacing:0" *ngIf="!!changelog">
+  <tbody [class]="'versao_desejada'">
+    <tr class="cabecalho">
+        <td class="timeline"></td>
+        <td class="description">
+            <b>{{changelog.modulo}} v{{changelog.versao}}</b> 
+        </td>
+    </tr>
+
+    <tr *ngIf="changelog.correcoes.length > 0">
+        <td class="timeline">&nbsp;</td>
+        <td class="subgrupo">Correções</td>
+    </tr>
+    <tr *ngFor="let item of changelog.correcoes">
+        <td class="timeline">&nbsp;</td>
+        <td class="detalhe">- {{item}}</td>
+    </tr>
+    <tr *ngIf="changelog.correcoes.length > 0"><td class="timeline">&nbsp;</td><td></td></tr>
+
+    <tr *ngIf="changelog.melhorias.length > 0">
+        <td class="timeline"></td>
+        <td class="subgrupo" >Melhorias</td>
+    </tr>
+    <tr *ngFor="let item of changelog.melhorias">
+        <td class="timeline">&nbsp;</td>
+        <td class="detalhe">- {{item}}</td>
+    </tr>
+    <tr *ngIf="changelog.melhorias.length > 0"><td class="timeline">&nbsp;</td><td></td></tr>
+
+    <tr *ngIf="changelog.dependencias.length > 0">
+        <td class="timeline"></td>
+        <td class="subgrupo" >Dependências</td>
+    </tr>
+    <tr *ngFor="let item of changelog.dependencias">
+        <td class="timeline">&nbsp;</td>
+        <td class="detalhe">- {{item.modulo}} v{{item.versao}} <a routerLink="/update/detail/{{item.patch_id}}" class="detalhes">Detalhes</a></td>
+    </tr>
+    <tr *ngIf="changelog.dependencias.length > 0"><td class="timeline">&nbsp;</td><td></td></tr>
+  </tbody>
+
+</table>

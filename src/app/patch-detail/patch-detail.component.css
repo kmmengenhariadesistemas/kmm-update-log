@@ -1,0 +1,89 @@
+.detalhes {
+    color: #4A90E2;
+    font-family: Arial;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 13px;
+    text-decoration: underline;
+    cursor: hand;
+}
+
+.versao .cabecalho td.timeline {
+    padding: 0px 0px 0px 0px; 
+    vertical-align: top;
+    background: url("https://s3-sa-east-1.amazonaws.com/update.kmm.com.br/assets/images/cruz.png") no-repeat, url('https://s3-sa-east-1.amazonaws.com/update.kmm.com.br/assets/images/vertical_com_espaco.png') repeat-y;
+    height: 24px;
+}
+
+.versao .cabecalho td.description {
+    color: #12110E;
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+}
+
+td.subgrupo {
+    color: #757575;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 0px 0px 0px 0px;
+    line-height: 17px;
+}
+
+.versao td.timeline {
+    padding: 0px 0px 0px 0px; 
+    height: 19px; 
+    background-image: url('https://s3-sa-east-1.amazonaws.com/update.kmm.com.br/assets/images/vertical_com_espaco.png');
+    background-repeat: repeat-y;
+}
+
+.versao td.detalhe {
+    color: #757575;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+}
+
+.versao_desejada td.detalhe {
+    color: #757575;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+}
+
+.versao_desejada .cabecalho td.timeline {
+    padding: 0px 0px 0px 0px; 
+    vertical-align: top;
+    background: url("https://s3-sa-east-1.amazonaws.com/update.kmm.com.br/assets/images/kmm_v_desejada.png") no-repeat;
+    height: 40px;
+}
+
+.versao_desejada .cabecalho td.description {
+    color: #328AE1;
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+}
+
+.timeline {
+    padding: 0px 0px 0px 0px; 
+    width: 50px
+}
+
+.versao_instalada td.timeline {
+    background: url("https://s3-sa-east-1.amazonaws.com/update.kmm.com.br/assets/images/kmm_v_instalada.png") no-repeat;
+    height: 40px;
+}
+
+.versao_instalada td.description {
+    color: #757575;
+    font-family: Arial;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+}

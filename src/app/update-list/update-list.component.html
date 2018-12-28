@@ -1,0 +1,35 @@
+<table cellspacing="0" cellpadding="0"  style="padding: 0px 0px 0px 0px; border-spacing:0" *ngIf="!!update">
+  <tr class="versao_instalada">
+    <td class="timeline"></td><td class="description">Versão instalada: <b>{{update.versao_atual.versao}}</b></td>
+  </tr>
+  <tbody  *ngFor="let versao of update.changes; let i = index" [class]="(i==update.changes.length-1)?'versao_desejada':'versao'">
+    <tr class="cabecalho">
+        <td class="timeline"></td>
+        <td class="description">
+            <b>Versão {{versao.versao}}</b> 
+            &nbsp;<a routerLink="/update/detail/{{versao.patch_id}}" class="detalhes">Detalhes</a>
+        </td>
+    </tr>
+
+    <tr *ngIf="versao.correcoes.length > 0">
+        <td class="timeline">&nbsp;</td>
+        <td class="subgrupo">Correções</td>
+    </tr>
+    <tr *ngFor="let item of versao.correcoes">
+        <td class="timeline">&nbsp;</td>
+        <td class="detalhe">- {{item}}</td>
+    </tr>
+    <tr *ngIf="versao.correcoes.length > 0"><td class="timeline">&nbsp;</td><td></td></tr>
+
+    <tr *ngIf="versao.melhorias.length > 0">
+        <td class="timeline"></td>
+        <td class="subgrupo" >Melhorias</td>
+    </tr>
+    <tr *ngFor="let item of versao.melhorias">
+        <td class="timeline">&nbsp;</td>
+        <td class="detalhe">- {{item}}</td>
+    </tr>
+    <tr *ngIf="versao.melhorias.length > 0"><td class="timeline">&nbsp;</td><td></td></tr>
+  </tbody>
+
+</table>
